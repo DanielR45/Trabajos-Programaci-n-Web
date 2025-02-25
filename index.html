@@ -167,10 +167,20 @@
 
   <main class="px-3">
     <h1>SOLICITUD DE PERMISO DE VIAJE</h1>
+    <h4>Básicos</h4>
     <form method="post" action="procesar.php">
+      <input type="text" name="doc" placeholder="Digite su documento de identidad" class="form-control" required>
+      <br>
+      <select name="RH" class="form-control" required>
+        <option value="">Seleccione su tipo de sangre</option>
+        <option value="A+">Tipo A+</option>
+        <option value="O+">Tipo O+</option>
+      </select>
       <input type="text" name="Usuario" placeholder="Digite su nombre" class="form-control" required>
       <br>
-      <input type="document" name="doc" placeholder="Digite su documento de identidad" class="form-control" required>
+      <input type="text" name="Usuario2" placeholder="Digite sus apellidos" class="form-control" required>
+      <br>
+      <input type="text" name="doc" placeholder="Digite su documento de identidad" class="form-control" required>
       <br>
       <input type="date" name="Fecha de nacimiento" placeholder="Digite su fecha de nacimiento" min="1995-01-01" max="2025-01-01" class="form-control" required>
       <br>
