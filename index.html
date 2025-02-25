@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="en" data-bs-theme="auto">
   <head><script src="../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
@@ -7,9 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Cover Template · Bootstrap v5.3</title>
+    <title>Signin Template · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
     
 
@@ -98,9 +98,9 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="sign-in.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
+  <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -153,70 +153,67 @@
     </div>
 
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-      </nav>
+<main class="form-signin w-100 m-auto">
+  <form>
+    <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">DATOS PERSONALES</h1>
+    <h5>Básicos</h5>
+
+    <div class="form-floating">   
+      <select name="floatingInput" id="Documento" class="form-control"placeholder="Documento">      
+        <option value="TI">Tarjeta de identidad</option>
+        <option value="CC">Cedula de ciudadania</option>        
+      </select>
     </div>
-  </header>
-
-  <main class="px-3">
-    <h1>SOLICITUD DE PERMISO DE VIAJE</h1>
-    <h4>Básicos</h4>
-    <form method="post" action="procesar.php">
-      <input type="text" name="doc" placeholder="Digite su documento de identidad" class="form-control" required>
-      <br>
-      <select name="RH" class="form-control" required>
-        <option value="">Seleccione su tipo de sangre</option>
-        <option value="A+">Tipo A+</option>
-        <option value="O+">Tipo O+</option>
+    <div class="form-floating">
+      <input type="number" class="form-control" id="floatingPassword" placeholder="Documento">
+      <label for="floatingPassword">Numero de documento</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingPassword" placeholder="Nombre(s)">
+      <label for="floatingPassword">Nombre(s)</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingPassword" placeholder="Primer apellido">
+      <label for="floatingPassword">Primer apellido</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingPassword" placeholder="Segundo apellido">
+      <label for="floatingPassword">Segundo apellido</label>
+    </div>
+    <div class="form-floating">   
+      <select name="floatingInput" id="Género" class="form-control"placeholder="Género">      
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>        
       </select>
-      <input type="text" name="Usuario" placeholder="Digite su nombre" class="form-control" required>
-      <br>
-      <input type="text" name="Usuario2" placeholder="Digite sus apellidos" class="form-control" required>
-      <br>
-      <input type="text" name="doc" placeholder="Digite su documento de identidad" class="form-control" required>
-      <br>
-      <input type="date" name="Fecha de nacimiento" placeholder="Digite su fecha de nacimiento" min="1995-01-01" max="2025-01-01" class="form-control" required>
-      <br>
-      <select name="RH" class="form-control" required>
-        <option value="">Seleccione su tipo de sangre</option>
-        <option value="A+">Tipo A+</option>
-        <option value="O+">Tipo O+</option>
-        <option value="B+">Tipo B+</option>
-        <option value="AB+">Tipo AB+</option>
-        <option value="A-">Tipo A-</option>
-        <option value="O-">Tipo O-</option>
-        <option value="B-">Tipo B-</option>
-        <option value="AB-">Tipo AB-</option>
-      </select>
-      <br>
-      <input type="tel" name="telephon" placeholder="Digite su número de telefono" class="form-control" required>
-      <br>
-      <Select name="Destino de viaje" class="form-control" required>
-        <option value="">Seleccione su destino de viaje</option>
-        <option value="Cancún">Cancún</option>
-        <option value="New York">New York</option>
-        <option value="Río De Janeiro">Río De Janeiro</option>
-        <option value="París">París</option>
-        <option value="Madrid">Madrid</option>
-        <option value="Bógota">Bógota</option>
-        <option value="Moscú">Moscú</option>
-      </Select>
-      <br>
-      <input type="submit" name="Confirmar" value="Confirmar" class="btn-bd-primary">
-    </form>
-  </main>
+    </div>
+    <br>
+    <h5>Básicos</h5>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingPassword" placeholder="correo electronico">
+      <label for="floatingPassword">Correo electronico</label>
+    </div>
 
-  <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-  </footer>
-</div>
+
+
+    <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Acepto que todos mis datos personales se encuentran actualizados
+      </label>
+    </div>
+    <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Acepto ley y protección de datos
+      </label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" type="submit">Ingresar
+    </button>
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+  </form>
+</main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
